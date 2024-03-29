@@ -1,0 +1,267 @@
+/* table {
+  border: 1px solid #ccc;
+  border-collapse: collapse;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  width: 100% fit-content;
+  table-layout: fixed;
+}
+
+table caption {
+  font-size: 1.5em;
+  margin: 0.5em 0 0.75em;
+}
+
+table tr {
+  background-color: #f8f8f8;
+  border: 1px solid #ddd;
+  padding: 0.35em;
+}
+
+table th,
+table td {
+  padding: 0.625em;
+  text-align: center;
+}
+
+table th {
+  font-size: 0.85em;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+@media screen and (max-width: 600px) {
+  table {
+    border: 0;
+  }
+
+  table caption {
+    font-size: 1.3em;
+  }
+
+  table thead {
+    border: none;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+  }
+
+  table tr {
+    border-bottom: 3px solid #ddd;
+    display: block;
+    margin-bottom: 0.625em;
+  }
+
+  table td {
+    border-bottom: 1px solid #ddd;
+    display: block;
+    font-size: 0.8em;
+    text-align: right;
+  }
+
+  table td::before {
+    content: attr(data-label);
+    float: left;
+    font-weight: bold;
+    text-transform: uppercase;
+  }
+
+  table td:last-child {
+    border-bottom: 0;
+  }
+} */
+
+.listofusers {
+  display: flex;
+  flex-direction: column;
+  overflow-y: auto;
+  /* justify-items: center; */
+  /* box-sizing: border-box; */
+
+  min-height: 350px;
+  max-height: 350px;
+ 
+  color: white;
+  width: 400px;
+  border-radius: 10px;
+  background-color: #200648;
+  position: relative;
+}
+.searchBarUser {
+  /* width: 100%; */
+  display: flex;
+
+  flex-direction: column;
+  
+  /* align-items: center; */
+  padding: 5px;
+
+
+  background-color: #200648;
+  /* align-items: center; */
+}
+.containerContact{
+ 
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items:center;
+    flex-wrap: wrap;
+    width:75%;
+    background-color:#fff;
+    padding:20px;
+    border-radius:10px;
+    box-shadow: 0 3px 8.3px 0.7px rgb(163 93 255 / 35%);
+
+ 
+}
+.searchheader {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  justify-content: center;
+}
+.usershowdet {
+  display: flex;
+  align-items: center;
+  padding: 0px 25px;
+  height: 250px;
+  /* margin-top: 10px; */
+  cursor: pointer;
+  margin-bottom: 2px;
+}
+.userPicDet {
+  width: 40px;
+  height: 40px;
+  border-radius: 100%;
+}
+.userInfoDet {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  /* align-items: center; */
+  margin-left: 10px;
+  margin-top: 10px;
+
+  /* height:220px; */
+  
+}
+.usershowdet:hover {
+  background-color: #7e7bb9a9;
+}
+.usersubrow {
+  font-family: Arial, Helvetica, sans-serif;
+  margin-bottom: 5px;
+}
+.selected {
+  /* padding: 5px 10px; */
+  padding-right: 5px;
+  border-radius: 20px;
+  display: flex;
+  box-sizing: border-box;
+  align-items: center;
+  margin: 5px;
+  font-size: 0.8rem;
+  animation: toBottomApper 0.5s;
+  transform: translateY(0px);
+  animation-fill-mode: forwards;
+  background-color: #5d56e2e6;
+}
+.selected-exit-active {
+  /* opacity: 0;
+  transition: opacity 0.4s ease-out; */
+  animation: Hided 0.3s;
+  animation-fill-mode: forwards;
+}
+
+.userimage {
+  height: 25px;
+  position: relative;
+  width: 25px;
+  border-radius: 100%;
+  object-fit: cover;
+  transform: scale(1.6);
+  cursor: pointer;
+}
+
+.overlayImage {
+  display: none;
+  position: absolute;
+  left: 0px;
+  width: 25px;
+  height: 25px;
+  text-align: center;
+  background-color: rgba(92, 53, 234, 0.739);
+  transform: scale(1.6);
+  border-radius: 100%;
+  transition: all 0.1s ease-out;
+  cursor: pointer;
+  z-index: 1;
+}
+.selected:hover .overlayImage {
+  display: flex;
+}
+.overlayImage::before {
+  content: "x";
+  position: absolute;
+  left: 0px;
+  right: 0;
+  top: 4px;
+  bottom: 0;
+  z-index: 10;
+  animation: rotat 0.1s;
+  animation-fill-mode: forwards;
+}
+.util {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+.delted {
+  display: flex;
+  flex-direction: column;
+  animation: toBottomApper 1s;
+  animation-fill-mode: forwards;
+}
+@keyframes toBottomApper {
+  0% {
+    opacity: 0;
+  }
+  20% {
+    opacity: 0.4;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes rotat {
+  0% {
+    transform: rotate(-45deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+@keyframes Hided {
+  0% {
+    opacity: 1;
+  }
+  20% {
+    opacity: 0.4;
+  }
+  100% {
+    opacity: 0;
+    /* transform: translateY(5px); */
+  }
+}
+@media only screen and (max-width: 600px) {
+  .containerContact{
+    width: 100%;
+  }
+
+  }

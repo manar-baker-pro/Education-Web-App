@@ -1,0 +1,103 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "poppins", sans-serif;
+}
+.footer {
+  position: relative;
+  bottom: 0px;
+
+  width: 100%;
+}
+.footerContainer {
+  position: relative;
+  background:linear-gradient(170deg, #8d92ce,#8678e6,#8678e6);
+
+  width: 100%;
+  color: #fff;
+  font-size: 15px;
+  height: 70vh;
+
+  overflow: hidden;
+}
+.waveTopStyle {
+  position: absolute;
+  top: -110px;
+  background-color: transparent;
+  width: 100%;
+}
+
+.info {
+  width: 40%;
+  margin:90px auto;
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  filter: drop-shadow(0 0 2px rgba(14, 14, 14, 0.4));
+  flex-wrap: wrap;
+}
+.line {
+  border-bottom: 2px solid #5c4aa6;
+  width: 100%;
+  margin-top: 20px;
+}
+
+.iconDesign {
+  width: 69vw;
+  display: flex;
+  justify-content: end;
+  margin: 20px;
+}
+.contact{
+    display: flex;
+    width: 100%;
+    margin-top: 20px;
+    justify-content: space-between;
+    flex-direction: row-reverse;
+    padding: 10px;
+
+}
+.paragraph{
+    font-size: 14px;
+    padding-bottom: 20px;
+    border-bottom: 4px solid #5c4aa6;
+}
+.iconsContact{
+    align-self: center;
+}
+.conItem{
+    display: flex;
+    align-items: center;
+    margin: 8px;
+}
+
+.textCon{
+    font-size: 12px;
+}
+.contact .iconContact{
+
+font-size: 23px !important;
+margin-right: 8px;
+}
+.conItem .iconContact{
+    font-size: 14px !important;
+}
+
+
+
+@media (max-width: 810px) {
+    .info{
+        width: 80%;
+     
+    }
+    .info .titlePage{
+        font-size: 18px;
+    }
+    .info .paragraph{
+        font-size: 12px;
+    }
+ 
+}

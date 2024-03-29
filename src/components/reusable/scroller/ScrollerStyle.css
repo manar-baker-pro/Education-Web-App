@@ -1,0 +1,13 @@
+.showusers {
+  display: flex;
+  flex-direction: column;
+  overflow-y: auto;
+  justify-items: center;
+  width: 96%;
+  height: 50px;
+  padding: 0px 10px;
+  color: white;
+  padding: 5px 5px;
+  background-color: red;
+  position: relative;
+}
